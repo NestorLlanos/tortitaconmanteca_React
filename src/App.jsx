@@ -1,7 +1,8 @@
-import './App.css'
+
 import Navbar from './components/Nabvar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import Buttom from './components/Buttom/Buttom'
+import ItemCount from './components/ItemCount/ItemCount'
+import Footer from './components/Footer/Footer'
 
 function App() {
   
@@ -9,10 +10,13 @@ function App() {
     <>
       
       <Navbar/>
-      <ItemListContainer greeting={'Bienvenidos'} />
-      <Buttom label='Inicio' className= 'btn btn-outline-secondary' callBack = {() => console.log('Hice click en Inicio')}/>
-      <Buttom label='Historia' className= 'btn btn-outline-secondary' callBack ={() =>console.log('Hice click en Historia')}/>
-      <Buttom label='Contacto' className= 'btn btn-outline-secondary'callBack ={() =>console.log('Hice click en Contacto')}/>
+      <ItemListContainer greeting={'Ahora podes hacer tu compra desde la web y retiras por nuestro local...'} />
+      <ItemCount initialValue={0} min={0} max={20}/>
+      <ItemCount initialValue={0} min={0} max={10}/>
+  
+      <Footer label='Inicio' className= 'btn' callBack = {() => console.log('Hice click en Inicio')}/>
+      <Footer label='Historia' className= 'btn' callBack ={() =>console.log('Hice click en Historia')}/>
+      <Footer label='Contacto' className= 'btn'callBack ={() =>console.log('Hice click en Contacto')}/>
     </>
   )
 }

@@ -1,9 +1,9 @@
-import cart from "./assets/cart.png"
+import cart from "../../assets/cart.png"
 
 const CartWidget = () =>{
     return (
         <div>
-            <img src= {cart} alt="cart-widget" />
+            <img src= {cart} alt="cart-widget" style = {{color:'white'}} />
             0
         </div>
     )

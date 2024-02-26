@@ -1,8 +1,9 @@
 
 const ItemListContainer = ({greeting}) =>{
     return(
-        <div>
-            <h1>{greeting}</h1>
+        <div style={{backgroundColor: '#F6416C'}}>
+            <h4>{greeting}</h4>
+            <h4></h4>
         </div>        
 
     )
