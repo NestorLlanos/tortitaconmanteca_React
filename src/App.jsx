@@ -10,7 +10,7 @@ function App() {
     <>
       
       <Navbar/>
-      <ItemListContainer greeting={'Ahora podes hacer tu compra desde la web y retiras por nuestro local...'} />
+      <ItemListContainer greeting={'Bienvenidos a nuestro sitio...'} />
       <ItemCount initialValue={0} min={0} max={20}/>
       <ItemCount initialValue={0} min={0} max={10}/>
   
