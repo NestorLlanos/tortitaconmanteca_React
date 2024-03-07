@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react"
 import { getProducts } from "../../asyncMock"
+import ItemList from "../ItemList/ItemList"
+import classes from "./ItemListContainer.module.css"
+
 
 const ItemListContainer = ({greeting}) =>{
     const [products, setProduct] = useState ([])
@@ -14,22 +17,10 @@ const ItemListContainer = ({greeting}) =>{
         })
     }, [])
 
-//Función transformadora:
-
-    
-
     return(
-        <div>
+        <div className={classes.contenedor}>
             <h1>{greeting} </h1>
-            {products.map (product => {
-        return(
-            <div>
-                <h2>{product.name}</h2>
-                <img src={product.img} alt="" style={{width:100}}/>
-                <h3>Precio: ${product.price}</h3>
-            </div>
-        )
-    })}
+            <ItemList products={products}/>
     
         </div>        
 

@@ -1,26 +1,36 @@
 import { useState } from "react"
+import classes from "./ItemCount.module.css"
 
-const ItemCount = (props) =>{
-    const [count, setCount] = useState(props.initialValue)
+const ItemCount = ({stock, initial, onAdd}) =>{
+    const [quantity, setQuantity] = useState(initial)
 
-        const decrement = () =>{
-            if (count > props.min) {
-                setCount (count -1) 
-            }
-            
-        }
+        
         const increment = () =>{
-            if (count < props.max) {
-                setCount (count +1) 
+            if (quantity < stock) {
+                setQuantity (quantity +1) 
             }
        }
 
+       const decrement = () =>{
+        if (quantity > 1) {
+            setQuantity (quantity -1) 
+        }
+        
+    }
+
 
     return(
-        <div>
-            <h2>{count}</h2>
-            <button onClick={decrement}>Decrementar</button>
-            <button onClick={increment}>Incrementar</button>
+        <div className={classes.count}>
+                       
+            <button className= {'btn btn-outline-secondary'} style={{marginRight: 10}} onClick={decrement}>-</button>
+            <h4>{quantity}</h4>
+            <button className= {'btn btn-outline-secondary'}  style={{marginLeft: 10}} onClick={increment}>+</button>
+        
+            <div className={classes.add}>
+                <button className= {'btn btn-outline-secondary'}  style={{marginLeft: 10}} onClick={()=> onAdd(quantity)} disabled = {!stock}>
+                    Agregar al carrito
+                </button>
+            </div>
         </div>
 
     )
