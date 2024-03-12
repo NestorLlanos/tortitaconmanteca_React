@@ -1,37 +1,36 @@
 import { useState } from "react"
 import classes from "./ItemCount.module.css"
 
-const ItemCount = ({stock, initial, onAdd}) =>{
-    const [quantity, setQuantity] = useState(initial)
+const ItemCount = ({stock, initial= 1, onAdd}) =>{
+    const [count, setCount] = useState(initial)
 
         
         const increment = () =>{
-            if (quantity < stock) {
-                setQuantity (quantity +1) 
+            if (count < stock) {
+                setCount (prev => prev +1) 
             }
        }
 
        const decrement = () =>{
-        if (quantity > 1) {
-            setQuantity (quantity -1) 
+        if (count > 1) {
+            setCount (prev =>prev -1) 
         }
         
     }
 
 
     return(
-        <div className={classes.count}>
-                       
+        <article className={classes.count}>
+            <h4>{count}</h4>          
             <button className= {'btn btn-outline-secondary'} style={{marginRight: 10}} onClick={decrement}>-</button>
-            <h4>{quantity}</h4>
-            <button className= {'btn btn-outline-secondary'}  style={{marginLeft: 10}} onClick={increment}>+</button>
-        
+                                
             <div className={classes.add}>
-                <button className= {'btn btn-outline-secondary'}  style={{marginLeft: 10}} onClick={()=> onAdd(quantity)} disabled = {!stock}>
+                <button className= {'btn btn-outline-secondary'}  style={{marginLeft: 10}} onClick={()=> onAdd(count)} disabled = {!stock}>
                     Agregar al carrito
                 </button>
             </div>
-        </div>
+            <button className= {'btn btn-outline-secondary'}  style={{marginLeft: 10}} onClick={increment}>+</button>
+        </article>
 
     )
 }

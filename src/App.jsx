@@ -3,20 +3,26 @@ import Navbar from './components/Nabvar/Navbar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Footer from './components/Footer/Footer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   
   return (
-    <div>
+    <>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element ={<ItemListContainer greeting={'Bienvenidos a nuestro sitio...'} />}/>
+          <Route patch='/category/:categoryId' element ={<ItemListContainer greeting={'Productos de la categoria:'}/>}/>
+          <Route patch='/item/:itemId' element ={<ItemDetailContainer />}/>
+          <Route patch='*' element = {<h4>404 NOT FOUND</h4>}/>
+        </Routes>
+                
+      </BrowserRouter>
       
-      <Navbar/>
-      <ItemListContainer greeting={'Bienvenidos a nuestro sitio...'} />
-      <ItemDetailContainer />
        
-      <Footer label='Inicio' className= 'btn' callBack = {() => console.log('Hice click en Inicio')}/>
-      <Footer label='Historia' className= 'btn' callBack ={() =>console.log('Hice click en Historia')}/>
-      <Footer label='Contacto' className= 'btn'callBack ={() =>console.log('Hice click en Contacto')}/>
-    </div>
+      
+    </>
   )
 }
 

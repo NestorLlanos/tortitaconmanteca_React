@@ -1,7 +1,8 @@
 
 import classes from "./Item.module.css"
 
-const Item = ({id, name, img, price, stock}) => {
+
+const Item = ({id,name, img, price, stock}) => {
     return(
         <article className={classes.Item}>
             <header>
@@ -12,7 +13,7 @@ const Item = ({id, name, img, price, stock}) => {
                 <img src={img} alt={name} className={classes.img}/>
             </picture>
 
-            <section>
+            
                 <p className={classes.info}>
                 Precio: ${price}
                 </p>
@@ -20,10 +21,10 @@ const Item = ({id, name, img, price, stock}) => {
                 Stock: {stock} Un.
                 </p>
 
-            </section>
+                
 
             <footer>
-                <button className= {'btn btn-outline-secondary'} > Ver detalle </button>
+                <link to = {`/item/${id}`} className= {'btn btn-outline-secondary'} > Ver detalle </link>
             </footer>
                                 
                

@@ -4,6 +4,10 @@ import classes from "./ItemDetail.module.css"
 
 
 const ItemDetail =({id, name, price, category, img, stock, description}) => {
+const handLeOnadd = (cuantity) => {
+    console.log('Cantidad del producto: ' + cuantity)
+}
+
     return(
         <article className={classes.Item}>
             <header>
@@ -26,7 +30,7 @@ const ItemDetail =({id, name, price, category, img, stock, description}) => {
                 </p>
                 
             </section>                                           
-            <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada', quantity)}/>
+            <ItemCount stock={stock} onAdd={handLeOnadd}/>
         </article>
     )
 

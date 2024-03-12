@@ -1,22 +1,24 @@
 import CartWidget from "../CartWidget/CartWidget"
 import classes from "./Navbar.module.css"
-// import ImagenHeader from "../../assets/header2.png"
+import { NavLink, Link } from "react-router-dom"
+
 
 
 const Navbar = () =>{
     return(
         <header className={classes.header}>
-            {/* <img src={ImagenHeader} alt="" className={classes.ImagenHeader}/>        */}
-            <h2 className={classes.h2}>Tortita con Manteca</h2>     
+            <Link to='/'> 
+               <h3 className={classes.h2}>Tortita con Manteca</h3>
+            </Link>
+
             <nav className={classes.nav}>
-            
-                <a className={classes.a}>Tortas</a>
-                <a className={classes.a}>Alfajores</a>
-                <a className={classes.a}>Tartas</a>
-                <a className={classes.a}>Box</a>
-                <CartWidget/>
-                        
+                <Link to='/category/Tortas' >Tortas</Link>
+                <Link to={'/category/Alfajores'} >Alfajores</Link>
+                <Link to={'/category/Tartas'} >Tartas</Link>
+                <Link to={'/category/Box'}>Box</Link>
             </nav>
+            <CartWidget/>     
+            
             
         </header>
     )
