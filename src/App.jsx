@@ -13,9 +13,9 @@ function App() {
         <Navbar/>
         <Routes>
           <Route path='/' element ={<ItemListContainer greeting={'Bienvenidos a nuestro sitio...'} />}/>
-          <Route patch='/category/:categoryId' element ={<ItemListContainer greeting={'Productos de la categoria:'}/>}/>
-          <Route patch='/item/:itemId' element ={<ItemDetailContainer />}/>
-          <Route patch='*' element = {<h4>404 NOT FOUND</h4>}/>
+          <Route path='/category/:categoryId' element ={<ItemListContainer greeting={'Productos de la categoria:'}/>}/>
+          <Route path='/item/:itemId' element ={<ItemDetailContainer />}/>
+          <Route path='*' element = {<h4>404 NOT FOUND</h4>}/>
         </Routes>
                 
       </BrowserRouter>
