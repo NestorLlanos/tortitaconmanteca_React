@@ -1,5 +1,6 @@
 
 import Navbar from './components/Nabvar/Navbar'
+import classes from './App.module.css'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Footer from './components/Footer/Footer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
@@ -8,8 +9,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   
   return (
-    <>
-      <BrowserRouter>
+    <div className={classes.body}>
+      <BrowserRouter >
         <Navbar/>
         <Routes>
           <Route path='/' element ={<ItemListContainer greeting={'¡Hola! ¿Qué comemos hoy?'} />}/>
@@ -19,10 +20,11 @@ function App() {
         </Routes>
                 
       </BrowserRouter>
+      <Footer/>
       
        
       
-    </>
+    </div>
   )
 }
 

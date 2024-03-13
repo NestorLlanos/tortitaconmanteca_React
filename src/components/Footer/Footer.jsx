@@ -1,13 +1,16 @@
 import classes from "./Footer.module.css"
 
-const Footer = (props) =>{
-    console.log(props);
+const Footer = () =>{
+    
     return (
-        <footer className={classes.footer}>
-            <button onClick={props.callBack} className = {props.className}> {props.label} </button>
+        <footer className={classes.footer}>  
 
-        </footer>
-        
+            <div >
+                <p> Desarrollado por <strong><span>Nestor Llanos </span></strong> &copy; Copyright <strong><span>Tortita con Manteca</span></strong>.</p>
+
+            </div>
+
+        </footer>  
 
     )
 }
