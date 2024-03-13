@@ -1,6 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget"
 import classes from "./Navbar.module.css"
-import { NavLink, Link } from "react-router-dom"
+import {Link } from "react-router-dom"
 
 
 
@@ -12,10 +12,10 @@ const Navbar = () =>{
             </Link>
 
             <nav className={classes.nav}>
-                <NavLink to={`/category/tortas`} className={classes.a}>Tortas</NavLink>
-                <NavLink to={'/category/alfajores'} className={classes.a}>Alfajores</NavLink>
-                <NavLink to={'/category/tartas'} className={classes.a}>Tartas</NavLink>
-                <NavLink to={'/category/box'} className={classes.a}>Box</NavLink>
+                <Link to ='/category/tortas' className={classes.a}>Tortas</Link>
+                <Link to='/category/alfajores' className={classes.a}>Alfajores</Link>
+                <Link to='/category/tartas' className={classes.a}>Tartas</Link>
+                <Link to='/category/box' className={classes.a}>Box</Link>
             </nav>
             <CartWidget/>     
             
