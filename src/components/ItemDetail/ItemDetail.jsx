@@ -1,11 +1,16 @@
 import ItemCount from "../ItemCount/ItemCount"
 import classes from "./ItemDetail.module.css"
+import { useState } from "react"
 
 
 
 const ItemDetail =({id, name, price, category, img, stock, description}) => {
-const handLeOnadd = (cuantity) => {
-    console.log('Cantidad del producto: ' + cuantity)
+const [quantity, setQuantity] = useState(0)
+
+
+const handLeOnadd = (quantity) => {
+    console.log('Cantidad del producto: ' + quantity)
+    setQuantity(quantity)
 }
 
     return(
@@ -19,18 +24,11 @@ const handLeOnadd = (cuantity) => {
             </picture>
 
             <section>
-                <p className={classes.info}>
-                Precio: {category}
-                </p>
-                <p className={classes.info}>
-                Precio: {description}
-                </p>
-                <p className={classes.info}>
-                Precio: ${price}
-                </p>
-                
+                <p className={classes.info}> Categoria: {category}</p>
+                <p className={classes.info}> Descripción: {description}</p>
+                <p className={classes.info}> Precio: ${price}</p>                
             </section>                                           
-            <ItemCount stock={stock} onAdd={handLeOnadd}/>
+           {quantity === 0 ? <ItemCount stock={stock} onAdd={handLeOnadd}/> : <button className= {'btn btn-outline-secondary'}> Finalizar compra</button> }
         </article>
     )
 

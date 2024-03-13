@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom"
 
 const ItemListContainer = ({greeting}) =>{
     const [products, setProducts] = useState ([])
+    const [loading, setLoading] = useState(true)
 
     const {categoryId} = useParams()
 
@@ -21,7 +22,14 @@ const ItemListContainer = ({greeting}) =>{
         .catch (error =>{
             console.log(error)
         })
+        .finally (()=>{
+            setLoading(false)
+        })
     }, [categoryId])
+    
+    if (loading){
+        return <h2>Cargando productos...</h2>
+    }
 
     return(
         <div className={classes.contenedor}>
