@@ -7,7 +7,7 @@ const ItemList = ({products}) =>{
         <section className={classes.contenedorCards}> 
             {products.map (product => 
                 
-                    <Item key={product.id} {... product}/>
+                  { return <Item key={product.id} {... product}/>}
 
                 )
             }
