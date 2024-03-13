@@ -22,14 +22,10 @@ const ItemCount = ({stock, initial= 1, onAdd}) =>{
     return(
         <article className={classes.count}>
             <h4>{count}</h4>          
-            <button className= {'btn btn-outline-secondary'} style={{marginRight: 10}} onClick={decrement}>-</button>
-                                
-            <div className={classes.add}>
-                <button className= {'btn btn-outline-secondary'}  style={{marginLeft: 10}} onClick={()=> onAdd(count)} disabled = {!stock}>
-                    Agregar al carrito
-                </button>
-            </div>
-            <button className= {'btn btn-outline-secondary'}  style={{marginLeft: 10}} onClick={increment}>+</button>
+            <button className= {'btn btn-outline-secondary'}  onClick={decrement}>-</button>                            
+            <button className= {'btn btn-outline-secondary'}   onClick={()=> onAdd(count)} disabled = {!stock}>
+            Agregar al carrito </button>            
+            <button className= {'btn btn-outline-secondary'}   onClick={increment}>+</button>
         </article>
 
     )

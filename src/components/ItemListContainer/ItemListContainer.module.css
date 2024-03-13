@@ -8,3 +8,25 @@
 	margin-bottom: 20px;
 	display: block;
 }
+@media screen and (max-width: 767px) {
+
+	.saludo {
+		font-size:15px;
+		
+	}
+  }
+
+@media screen and (max-width: 550px) {
+  .saludo {
+		font-size:12px;
+		
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+  .saludo {
+		font-size:10px;
+		
+	}
+  }

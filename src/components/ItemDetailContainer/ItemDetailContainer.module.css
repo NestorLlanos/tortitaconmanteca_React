@@ -7,3 +7,25 @@
 	margin-bottom: 20px;
 	display: block;
 }
+
+@media screen and (max-width: 767px) {
+	.contenedor {
+		width: 95%;
+	}
+
+}
+
+@media screen and (max-width: 550px) {
+  .contenedor {
+    width: 60%;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+	.contenedor {
+		width: 90%;
+	}
+  
+}
+

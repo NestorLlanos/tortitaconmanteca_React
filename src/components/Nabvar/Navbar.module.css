@@ -30,11 +30,38 @@
 }
 .a:hover{
   color: azure;
-  size: 10;
+  font-size: large;
 }
-.ImagenHeader{
-  
-  object-fit: contain;
-  
 
+@media screen and (max-width: 767px) {
+
+	.tortita {
+		font-size:15px;
+		
+	}
+  .a{
+    font-size: 15px;
+  }
+
+	
+}
+
+@media screen and (max-width: 550px) {
+  .tortita {
+		font-size:12px;
+		
+	}
+  .a{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tortita {
+		font-size:10px;
+		
+	}
+  .a{
+    font-size: 10px;
+  }
 }

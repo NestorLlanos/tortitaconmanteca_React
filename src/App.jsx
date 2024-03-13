@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route path='/' element ={<ItemListContainer greeting={'Bienvenidos a nuestro sitio...'} />}/>
+          <Route path='/' element ={<ItemListContainer greeting={'¿Qué comemos hoy?'} />}/>
           <Route path='/category/:categoryId' element ={<ItemListContainer greeting={'Productos de la categoria:'}/>}/>
           <Route path='/item/:itemId' element ={<ItemDetailContainer />}/>
           <Route path='*' element = {<h4>404 NOT FOUND</h4>}/>

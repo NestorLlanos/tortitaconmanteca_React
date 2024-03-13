@@ -28,6 +28,7 @@
 	-webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 	border-radius: 5px;
+	object-fit: cover;
 	
 }
 
@@ -37,3 +38,29 @@
     font-size: 20px;
 }
 
+@media screen and (max-width: 767px) {
+
+	.Item {
+		width: 48%;
+		margin: 1%;
+	}
+	.img{
+		max-width: 40%;
+		height: auto;
+			
+	}
+	
+}
+
+@media screen and (max-width: 550px) {
+  .Item {
+    width: 60%;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Item {
+    width: 90%;
+  }
+}
