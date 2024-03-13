@@ -1,5 +1,6 @@
 
 import classes from "./Item.module.css"
+import { Link } from "react-router-dom"
 
 
 const Item = ({id,name, img, price, stock}) => {
@@ -24,7 +25,7 @@ const Item = ({id,name, img, price, stock}) => {
                 
 
             <footer>
-                <link to = {`/item/${id}`} className= {'btn btn-outline-secondary'} > Ver detalle </link>
+                <Link to = {`/item/${id}`} className= {'btn btn-outline-secondary'} > Ver detalle </Link>
             </footer>
                                 
                

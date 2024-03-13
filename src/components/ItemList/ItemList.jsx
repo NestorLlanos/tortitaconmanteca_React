@@ -5,10 +5,12 @@ import Item from "../Item/Item"
 const ItemList = ({products}) =>{
     return(
         <section className={classes.contenedorCards}> 
-            {products.map (product => {
-                return
-            <Item key={product.id} {... product}/>}
-        )}
+            {products.map (product => 
+                
+                    <Item key={product.id} {... product}/>
+
+                )
+            }
         
         </section>
     )
