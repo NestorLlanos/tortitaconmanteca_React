@@ -1,6 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount"
 import classes from "./ItemDetail.module.css"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 
 
@@ -28,7 +29,7 @@ const handLeOnadd = (quantity) => {
                 <p className={classes.info}> Descripción: {description}</p>
                 <p className={classes.info}> Precio: ${price}</p>                
             </section>                                           
-           {quantity === 0 ? <ItemCount stock={stock} onAdd={handLeOnadd}/> : <button className= {'btn btn-outline-secondary'}> Finalizar compra</button> }
+           {quantity === 0 ? <ItemCount stock={stock} onAdd={handLeOnadd}/> : <Link to='/cart' className= {'btn btn-outline-secondary'}> Finalizar compra</Link> }
         </article>
     )
 

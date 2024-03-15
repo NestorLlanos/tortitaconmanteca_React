@@ -1,7 +1,7 @@
 const products = [
     {id: '1',
     name: 'Torta con crema',
-    price: 5000,
+    price: 7000,
     category: 'tortas',
     img: 'https://content-cocina.lecturas.com/medio/2018/07/19/paso-a-paso-para-realizar-pastel-de-crema-de-vainilla-con-flores-resultado-final_42424c31_800x800.jpg',
     stock: 20,
@@ -21,7 +21,7 @@ price: 4000,
 category: 'alfajores',
 img: 'https://azucarledesma.com/wp-content/uploads/2022/05/20231108-AlfajoresMaicena.jpg',
 stock: 20,
-description: 'Alfajores x docena'
+description: 'Alfajores de maizena x docena'
 },
 {id: '4',
 name: 'Tarta Cabsha',
@@ -29,7 +29,7 @@ price: 5000,
 category: 'tartas',
 img: 'https://cocinerosargentinos.com/content/recipes/500x500/recipes.16856.jpg',
 stock: 20,
-description: 'Tartas dulces'
+description: 'Tarta cabsha de 22 cm de diametro'
 },
 {id: '5',
 name: 'Box-1',
@@ -40,12 +40,12 @@ stock: 20,
 description: 'Box personalizados'
 },
 {id: '6',
-name: 'Tartade ricota',
+name: 'Tarta de ricota',
 price: 4000,
 category: 'tartas',
 img: 'https://recetas.deagapornis.com/wp-content/uploads/2020/06/receta-tarta-de-ricota-390x200.png',
 stock: 20,
-description: 'Box personalizados'
+description: 'Tarta de ricota de 22 cm de diametro'
 },
 {id: '7',
 name: 'Alfajores de chocolate',
@@ -61,7 +61,7 @@ price: 5500,
 category: 'tartas',
 img: 'https://gourmetier.com/wp-content/uploads/2022/06/Fraisier_03-800x1195.jpg.webp',
 stock: 20,
-description: 'Tarta de frutas'
+description: 'Tarta de frutas de 22 cm de diametro'
 },
 {id: '9',
 name: 'Box-2',
