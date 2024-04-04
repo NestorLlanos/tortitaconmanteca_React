@@ -1,6 +1,6 @@
 const products = [
     {id: '1',
-    name: 'Torta con crema',
+    name: 'Torta en crema',
     price: 7000,
     category: 'tortas',
     img: 'https://content-cocina.lecturas.com/medio/2018/07/19/paso-a-paso-para-realizar-pastel-de-crema-de-vainilla-con-flores-resultado-final_42424c31_800x800.jpg',

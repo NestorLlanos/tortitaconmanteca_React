@@ -54,40 +54,34 @@
   align-items: center;
 }
 .mobileIcon{
-  border: none;
-  background: none;
-  font-size: 20px;
+  display: none;
 }
 
-@media screen and (max-width: 767px) {
-
-	.tortita {
-		font-size:15px;
-		
-	}
+@media screen and (max-width: 768px) {
   .navLink{
-    font-size: 15px;
-    padding-left: 5px;
+    display: none;
   }
-  .logo{
-    object-fit: cover;
-    width: 50%;
-  }
-	
+  .navLinkMobile{
+    position: absolute;
+    display: block;
+    background: linear-gradient(90deg, rgba(189,219,222,0.56) 4%, rgba(219,200,212,1) 57%, rgba(232,167,187,1) 99%);
+    box-shadow: rgba(50,50,93,0.23) 0 30px 30px -20px;
+    left: 0;
+    top: 10%;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+  }	
 }
 
 @media screen and (max-width: 550px) {
-  .tortita {
-		font-size:12px;
-		
-	}
+
   .navLink{
     font-size: 12px;
     padding-left: 1px;
   }
   .logo{
     object-fit: cover;
-    width: 10%;
+    width: 30%;
 
   }
 }
@@ -103,7 +97,7 @@
   }
   .logo{
     
-    width: 9%;
+    width: 30%;
   }
  
 }
