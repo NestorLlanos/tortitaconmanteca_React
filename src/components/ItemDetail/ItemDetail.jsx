@@ -11,12 +11,14 @@ const ItemDetail =({id, name, price, category, img, stock, description}) => {
 const [quantity, setQuantity] = useState(0)
 const {addItem} = useContext (CartContext)
 
+
 const handLeOnadd = (quantity) => {
     const objProductToAdd = {
         id, name, price, quantity
     }
 
     console.log('Cantidad del producto: ' + quantity)
+    /* showNotification ('success', `Se agregó correctamente ${quantity} ${name}`) */
     setQuantity(quantity)
     addItem(objProductToAdd)
 }
