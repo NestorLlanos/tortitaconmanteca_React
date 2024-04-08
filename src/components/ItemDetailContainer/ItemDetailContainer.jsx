@@ -4,6 +4,8 @@ import ItemDetail from "../ItemDetail/ItemDetail.jsx"
 import classes from "./ItemDetailContainer.module.css"
 import { useParams } from "react-router-dom"
 import { db } from "../../services/firebase/firebaseConfig.js"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemDetailContainer = () => {
@@ -22,12 +24,12 @@ const ItemDetailContainer = () => {
            })
         
         .catch (error =>{
-            console.error(error)
+            toast.error ('Error al cargar productos')
         })
     }, [itemId])
     return(
         <main className={classes.contenedor}>
-            <h1>Detalle del producto</h1>
+            <h1 className={classes.detalle}>Detalle del producto</h1>
             <ItemDetail {...product}/>
         </main>
     )

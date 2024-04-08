@@ -4,6 +4,8 @@ import classes from "./ItemDetail.module.css"
 import { useState, useContext} from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -17,8 +19,8 @@ const handLeOnadd = (quantity) => {
         id, name, price, quantity
     }
 
-    console.log('Cantidad del producto: ' + quantity)
-    /* showNotification ('success', `Se agregó correctamente ${quantity} ${name}`) */
+    toast.success (`Se agregó correctamente ${quantity} ${name}`)
+    
     setQuantity(quantity)
     addItem(objProductToAdd)
 }

@@ -1,7 +1,7 @@
 .Item{
 	
     box-sizing: border-box;
-	width: 25%;
+	width: 25%;	
 	margin: 1%;
 	-webkit-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
@@ -9,8 +9,9 @@
 	border-radius: 5px;
 	align-items: center;
 	text-align: center;
-	padding: 9px;
+	padding: 5px;
 	background-color:#FEECE2;
+	font-size: small;
 }
 .Item:hover {
 	box-shadow: 0 15px 30px rgba(0,0,0,0.3);
@@ -20,8 +21,8 @@
 	transform: translateY(-10px);
 }
 .img{
-	max-width: 80%;
-	height: 60%;
+	max-width: 60%;
+	height: 30%;
 	top: 0;
 	-webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);

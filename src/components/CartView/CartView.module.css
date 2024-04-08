@@ -1,0 +1,17 @@
+.contenedor {
+	box-sizing: border-box;
+	width: 98%;
+	margin: 1%;
+	border-radius: 5px;
+	align-items: center;
+	text-align: center;
+	padding: 9px;
+	background-color:#FEECE2;
+    font-size:x-small;
+	
+}
+.cart{
+    display: flex;
+    padding-top: 5px;
+	
+}

@@ -1,0 +1,16 @@
+.container{
+	display:grid;
+    box-sizing: border-box;
+    	
+	margin: 2%;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	border-radius: 5px;
+	align-items: center;
+	text-align: center;
+	padding: 12px;
+	background-color:#FEECE2;
+}
+
+
