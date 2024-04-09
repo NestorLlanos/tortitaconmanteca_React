@@ -1,17 +1,73 @@
+
 .contenedor {
+	display: block;
 	box-sizing: border-box;
-	width: 98%;
-	margin: 1%;
 	border-radius: 5px;
+	justify-content: center;
 	align-items: center;
-	text-align: center;
 	padding: 9px;
 	background-color:#FEECE2;
-    font-size:x-small;
+  }
+  
+  .titulo {
+	text-align: center;	
+	margin-bottom: 2px;
+  }
+  
+  .compraFinal {
 	
-}
-.cart{
-    display: flex;
-    padding-top: 5px;
+	display: flex;
+	flex-wrap: wrap;
 	
-}
+	
+  }
+  
+  .sectionDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 2px;
+	box-shadow: 0px 1px 0px 0px black;
+  }
+  
+  .img {
+	width: 80px;
+	padding: 2px;
+	border-radius: 50%;
+  }
+  
+
+  
+  .parrafo {
+	font-size: 20px;
+	padding-top: 30px;
+  }
+  
+  .total {
+	margin-top: 10px;
+	padding: 0px 10px 0px 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+  }
+  
+  .siguiente {
+	margin-top: 5px;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	color: black;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9);
+  }
+  
+   
+  .botones {
+	width: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 10px;
+  }

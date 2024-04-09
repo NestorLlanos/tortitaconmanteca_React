@@ -5,27 +5,42 @@ import classes from "./CartView.module.css"
 
 
 const CartView = () => {
-    const { cart, removeItem } = useContext(CartContext)
+    const { cart, removeItem, total,} = useContext(CartContext)
+
+    const vaciarCarrito = () => {
+        
+        cart.forEach((prod) => {
+          removeItem(prod.id);
+        });
+      };
 
     return (
         <div className={classes.contenedor}>
-            <h1>Tu carrito de compras</h1>
+            <h1 className="classes.titulo">Tus compras</h1>
             <section>
             {
                 cart.map(prod => {
                     return (
-                        <article key={prod.id} className={classes.cart}>
-                            <h3>{prod.quantity} - {prod.name}</h3>
-                            <button onClick={() => removeItem(prod.id)} className= {'btn btn-danger'} >X</button>
-                        </article>
+                        <div>
+                            <section key={prod.id} className={classes.sectionDiv}>
+                            <img src={prod.img} alt="" />
+                            <p >{prod.name}</p>
+                            <p > $ {prod.price}</p>                            
+                            <p >Cantidad {prod.quantity}</p>
+                            <button onClick={() => removeItem(prod.id)} className= {'btn btn-danger'} >Eliminar</button>                          
+                
+                            </section>                            
+                        </div>
+                        
                     )
                 })
             }
-            </section>
+            </section>   
+            <h2>Total a pagar: ${total}</h2>         
             <div>
-                <Link to='/checkout' className= {'btn btn-secondary'}>Avanzar con la compra</Link>
+                <Link className= {'btn btn-secondary'} to="/checkout">Avanzar con la compra</Link>
+                <button className= {'btn btn-secondary'} onClick={vaciarCarrito}>Vaciar Carrito</button>
             </div>
-            
         </div>
     )
 }

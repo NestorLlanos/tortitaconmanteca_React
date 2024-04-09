@@ -3,7 +3,7 @@ import classes from "./CheckoutForm.module.css";
 
 
 
-const CheckoutForm = ({onConfirm}) => {
+const CheckoutForm = ({onConfirm, createOrder}) => {
     const [name, setName] = useState ("")
     const [phone, setPhone] = useState ("")
     const [email, setEmail] = useState ("")
@@ -18,21 +18,30 @@ const CheckoutForm = ({onConfirm}) => {
     }
     return (
         <div className={classes.container}>
-            <form onSubmit={handleConfirm}></form>
-            <label>
+            <form onSubmit={handleConfirm} className="row g-3 needs-validation"></form>
+            <div className="col-md-4">
+            <label className="form-label">
                 Nombre 
-                <input type="text" value={name} onChange={({target})=>setName(target.value)} />
+                <input className="form-control" type="text" value={name} onChange={({target})=>setName(target.value)} />
             </label>
-            <label>
+            </div>
+
+            <div className="col-md-4">
+            <label className="form-label">
                 Telefono 
-                <input type="text" value={phone} onChange={({target})=>setPhone(target.value)} />
+                <input className="form-control" type="text" value={phone} onChange={({target})=>setPhone(target.value)} />
             </label>
-            <label>
+            </div>
+            
+            <div className="col-md-4">
+            <label className="form-label">
                 Email
-                <input type="text" value={email} onChange={({target})=>setEmail(target.value)} />
+                <input  className="form-control" type="text" value={email} onChange={({target})=>setEmail(target.value)} />
             </label>
-            <div>
-                <button  onClick={onConfirm} type="submit" className= {'btn btn-outline-secondary'}>Confirmar</button>
+            </div>
+            
+            <div className="col-12">
+                <button  onConfirm={createOrder} type="submit" className= {'btn btn-secondary'}>Confirmar</button>
             </div>
         </div>
     )

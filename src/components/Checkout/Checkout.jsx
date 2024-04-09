@@ -12,14 +12,14 @@ const Checkout = () => {
     const [orderId, setOrderId] = useState(null)
     const { cart, total, clearCart } = useContext(CartContext)
 
-    const createOrder = async (userData) => {
+    const createOrder = async (name,phone,email) => {
         
 
         try {              
             setLoading(true)
             const objOrder = {
                 buyer: {
-                    userData
+                    name,phone,email
                 },
                 items: cart,
                 total,
@@ -80,8 +80,8 @@ const Checkout = () => {
     return  (
         <div className="d-grid gap-2">
             <h1>Checkout</h1>
-            <CheckoutForm/>
-            <button onClick={createOrder} className= {'btn btn-outline-secondary'}>Generar orden de compras</button>
+            <CheckoutForm onClick={createOrder} className= {'btn btn-outline-secondary'}/>
+            
         </div>
     )
 }
