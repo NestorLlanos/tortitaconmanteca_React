@@ -9,7 +9,8 @@ export const CartProvider = ({children})=>{
         if (!isInCart(productToAdd.id)) {
           setCart(prev=>[...prev,productToAdd])
         } else{
-          console.log('Este producto ya fue agregado')
+            toast.error ('Este producto ya fue agregado',{position: "bottom-right",
+            autoClose: 2000})
         }
         }
 

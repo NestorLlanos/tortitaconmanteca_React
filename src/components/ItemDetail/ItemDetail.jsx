@@ -19,7 +19,9 @@ const handLeOnadd = (quantity) => {
         id, name, price, quantity
     }
 
-    toast.success (`Se agregó correctamente ${quantity} ${name}`)
+    toast.success (`Se agregó correctamente ${quantity} ${name}`,{position: "bottom-right",
+autoClose: 2000})
+    
     
     setQuantity(quantity)
     addItem(objProductToAdd)
