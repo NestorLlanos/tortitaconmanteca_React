@@ -12,14 +12,14 @@ const Checkout = () => {
     const [orderId, setOrderId] = useState(null)
     const { cart, total, clearCart } = useContext(CartContext)
 
-    const createOrder = async (name,phone,email) => {
+    const createOrder = async (userData) => {
         
 
         try {              
             setLoading(true)
             const objOrder = {
                 buyer: {
-                    name,phone,email
+                    userData
                 },
                 items: cart,
                 total,
@@ -58,6 +58,7 @@ const Checkout = () => {
                 
                 clearCart()
                 setOrderId(id)
+                console.log(id)
             } else {
                 toast.error ('hay productos que no tienen stock disponible')
                 
@@ -80,7 +81,7 @@ const Checkout = () => {
     return  (
         <div className="d-grid gap-2">
             <h1>Checkout</h1>
-            <CheckoutForm onClick={createOrder} className= {'btn btn-outline-secondary'}/>
+            <CheckoutForm onConfirm={createOrder} className= {'btn btn-outline-secondary'}/>
             
         </div>
     )
