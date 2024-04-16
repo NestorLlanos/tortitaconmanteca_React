@@ -1,6 +1,6 @@
 
 .contenedor {
-	position: relative;
+	
 	width: 90%;
 	margin: auto;
 	transition: all 0.3s ease-out;
@@ -9,25 +9,6 @@
 	display: block;
 	
 }
-@media screen and (max-width: 767px) {
-
-	.saludo {
-		font-size:15px;
-		
-	}
-  }
-
-@media screen and (max-width: 550px) {
-  .saludo {
-		font-size:12px;
-		
-	}
-
+.saludo{
+	padding-top: 100px;
 }
-
-@media screen and (max-width: 480px) {
-  .saludo {
-		font-size:10px;
-		
-	}
-  }

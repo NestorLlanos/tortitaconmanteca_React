@@ -4,8 +4,9 @@ import { Link } from "react-router-dom"
 import classes from "./CartView.module.css"
 
 
+
 const CartView = () => {
-    const { cart, removeItem, total,} = useContext(CartContext)
+    const { cart, removeItem, total} = useContext(CartContext)
 
     const vaciarCarrito = () => {
         
@@ -16,14 +17,14 @@ const CartView = () => {
 
     return (
         <div className={classes.contenedor}>
-            <h1 className="classes.titulo">Tus compras</h1>
+            <h1 className={classes.titulo}>Tus compras</h1>
             <section>
             {
-                cart.map(prod => {
+                cart.map((prod) => {
                     return (
-                        <div>
-                            <section key={prod.id} className={classes.sectionDiv}>
-                            <img src={prod.img} alt="" />
+                        <div key={prod.id}>
+                            <section  className={classes.sectionDiv}>
+                            <img src={prod.img} alt={prod.name} className={classes.imgView}/>
                             <p >{prod.name}</p>
                             <p > $ {prod.price}</p>                            
                             <p >Cantidad {prod.quantity}</p>
@@ -37,7 +38,7 @@ const CartView = () => {
             }
             </section>   
             <h2>Total a pagar: ${total}</h2>         
-            <div>
+            <div className={classes.botones}>
                 <Link className= {'btn btn-secondary'} to="/checkout">Avanzar con la compra</Link>
                 <button className= {'btn btn-secondary'} onClick={vaciarCarrito}>Vaciar Carrito</button>
             </div>
