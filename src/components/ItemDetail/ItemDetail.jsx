@@ -10,8 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemDetail =({id, name, price, category, img, stock, description}) => {
-const [quantity, setQuantity] = useState(0)
-const {addItem} = useContext (CartContext)
+
+const {addItem, isInCart} = useContext (CartContext)
 
 
 const handLeOnadd = (quantity) => {
@@ -23,7 +23,7 @@ const handLeOnadd = (quantity) => {
 autoClose: 2000})
     
     
-    setQuantity(quantity)
+    
     addItem(objProductToAdd)
 }
 
@@ -42,7 +42,7 @@ autoClose: 2000})
                 <p className={classes.info}> Descripción: {description}</p>
                 <p className={classes.info}> Precio: ${price}</p>                
             </section>                                           
-           {quantity === 0 ? <ItemCount stock={stock} onAdd={handLeOnadd}/> : <Link to='/cart' className= {'btn btn-outline-secondary'}> Finalizar compra</Link> }
+           {!isInCart (id) ? <ItemCount stock={stock} onAdd={handLeOnadd}/> : <Link to='/cart' className= {'btn btn-outline-secondary'}> Finalizar compra</Link> }
         </article>
     )
 

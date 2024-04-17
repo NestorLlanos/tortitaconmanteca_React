@@ -1,3 +1,4 @@
+
 import { useState, useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { getDocs, collection, query, where, documentId, writeBatch, addDoc, Timestamp } from "firebase/firestore"
@@ -5,6 +6,7 @@ import { db } from "../../services/firebase/firebaseConfig"
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+
 
 
 const Checkout = () => {
@@ -71,16 +73,16 @@ const Checkout = () => {
     }
 
     if(loading) {
-        return <h1>Su orden está siendo generada...</h1>
+        return <h1 style={{paddingTop: '110px', textAlign: 'center'}}>Su orden está siendo generada...</h1>
     }
 
     if(orderId) {
-        return <h1>El id de su orden es: {orderId}</h1>
+        return <h1 style={{paddingTop: '110px', textAlign: 'center'}}>El id de su orden es: {orderId}</h1>
     }
 
     return  (
         <div className="d-grid gap-2">
-            <h1>Checkout</h1>
+            <h1 style={{paddingTop: '110px', textAlign: 'center'}}>Ingresa tus datos</h1>
             <CheckoutForm onConfirm={createOrder} className= {'btn btn-outline-secondary'}/>
             
         </div>

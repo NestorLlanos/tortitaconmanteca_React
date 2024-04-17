@@ -3,3 +3,10 @@
     text-align: center;
     margin: 0px;
 }
+@media (max-width: 768px) {
+    .parrafo{
+        font-size:small;
+    }
+  
+  }
+  

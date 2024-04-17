@@ -34,7 +34,7 @@ const ItemListContainer = ({greeting}) =>{
     }, [categoryId])
     
     if (loading){
-        return <h2>Cargando productos...</h2>
+        return <h2 className={classes.titulo}>Cargando productos...</h2>
     }
 
     return(
