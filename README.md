@@ -28,7 +28,7 @@ npm run start
 Se abre una pestaña del navegador en el puerto 5173:
 
 
-Instalación con git clone 🔧
+**Instalación con git clone** 🔧
 
 Se puede clonar el repositorio, ingresando a una terminal y ejecutando: https://github.com/NestorLlanos/tortitaconmanteca_React.git
 
