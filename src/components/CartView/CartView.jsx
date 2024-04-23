@@ -12,9 +12,10 @@ const CartView = () => {
         
         cart.forEach((prod) => {
           removeItem(prod.id);
-        });
+          
+        });        
       };
-
+      console.log(cart)
     return (
         <div className={classes.contenedor}>
             <h1 className={classes.titulo}>Tus compras</h1>
@@ -23,14 +24,14 @@ const CartView = () => {
                 cart.map((prod) => {
                     return (
                         <div key={prod.id}>
-                            <section  className={classes.sectionDiv}>
+                            <div  className={classes.sectionDiv}>
                             <img src={prod.img} alt={prod.name} className={classes.imgView}/>
                             <p >{prod.name}</p>
                             <p > $ {prod.price}</p>                            
                             <p >Cantidad {prod.quantity}</p>
                             <button onClick={() => removeItem(prod.id)} className= {'btn btn-danger'} >Eliminar</button>                          
                 
-                            </section>                            
+                            </div>                            
                         </div>
                         
                     )
@@ -38,9 +39,9 @@ const CartView = () => {
             }
             </section>   
             <h2>Total a pagar: ${total}</h2>         
-            <div className={classes.botones}>
-                <Link className= {'btn btn-secondary'} to="/checkout">Avanzar con la compra</Link>
+            <div className= {classes.btnContainer }>
                 <button className= {'btn btn-secondary'} onClick={vaciarCarrito}>Vaciar Carrito</button>
+                <Link className= {'btn btn-secondary'} to="/checkout">Avanzar con la compra</Link>                
             </div>
         </div>
     )

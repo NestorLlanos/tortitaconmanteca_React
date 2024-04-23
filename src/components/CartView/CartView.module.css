@@ -36,8 +36,10 @@
   
   .imgView {
 	width: 80px;
+	height: 80px;
 	padding: 1px;
-	border-radius: 10%;
+	border-radius: 1%;
+	
   }
   
 
@@ -64,10 +66,29 @@
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9);
   }
   
-   
-  .botones {
+  .btnContainer{
+	display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2em, 0.5fr));
+  grid-gap: 20em;
+  div {
+    text-align: center;
+    div {
+      margin: 1em;
+    }
+  }
+}
+  
+  .botones {	
+		color: #ffffff;
+		font-weight: bold;
+		border-radius: 5px;
+		border: 0;
+		vertical-align: middle;
+		padding: 0.5em 1.2em;
+		cursor: pointer;
+		box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.06);
+		background-image: linear-gradient(#706f6d, #1d1c1c);
+		text-decoration: none;
 	
-	align-items: center;
-	text-align: center;
 	
   }
