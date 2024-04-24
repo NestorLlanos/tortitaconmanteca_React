@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { Link } from "react-router-dom"
 import classes from "./CartView.module.css"
+import { BoxIconElement } from "boxicons"
 
 
 
@@ -29,7 +30,7 @@ const CartView = () => {
                             <p >{prod.name}</p>
                             <p > $ {prod.price}</p>                            
                             <p >Cantidad {prod.quantity}</p>
-                            <button onClick={() => removeItem(prod.id)} className= {'btn btn-danger'} >Eliminar</button>                          
+                            <box-icon type='solid' name='trash' onClick={() => removeItem(prod.id)}></box-icon>                                         
                 
                             </div>                            
                         </div>
