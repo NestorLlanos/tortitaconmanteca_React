@@ -41,7 +41,7 @@ const CartView = () => {
             <h2>Total a pagar: ${total}</h2>         
             <div className= {classes.btnContainer }>
                 <button className= {'btn btn-secondary'} onClick={vaciarCarrito}>Vaciar Carrito</button>
-                <Link className= {'btn btn-secondary'} to="/checkout">Avanzar con la compra</Link>                
+                <Link className= {'btn btn-secondary'} to="/checkout">Avanzar</Link>                
             </div>
         </div>
     )
